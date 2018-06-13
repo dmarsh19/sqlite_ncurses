@@ -11,8 +11,8 @@
 ```
 make && make clean
 ```
-3. Run program, usage is documented if run with no params
+3. Run executable, usage is documented if run with no params
 ```
-./menu_from_sqlite menu.sqlite Menu Key,Description
+./menu_from_sqlite menu.sqlite Menu "Key,Description"
 ```
->Press Enter to select an item or Escape to end program without selecting.
+>Press Enter to select an item and exit or Esc to exit without selecting.
