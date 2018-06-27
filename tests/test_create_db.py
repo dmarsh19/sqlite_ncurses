@@ -24,7 +24,30 @@ TABLE_VALUES = {
     "Menu": (
         (0, "Apple"),
         (1, "Banana"),
-        (2, "Orange")
+        (2, "Orange"),
+        (3, "Lemon"),
+        (4, "Watermelon"),
+        (5, "Grapefruit"),
+        (6, "Strawberry"),
+        (7, "Lime"),
+        (8, "Cantaloupe"),
+        (9, "Blueberry"),
+        (10, "Peach"),
+        (11, "Cherry"),
+        (12, "Raspberry"),
+        (13, "Kiwi"),
+        (14, "Pear"),
+        (15, "Pineapple"),
+        (16, "Mango"),
+        (17, "Grape"),
+        (18, "Honeydew"),
+        (19, "Apricot"),
+        (20, "Nectarine"),
+        (21, "Coconut"),
+        (22, "Plum"),
+        (23, "Blackberry"),
+        (24, "Pomegranate"),
+        (25, "Fig")
     ),
 }
 
