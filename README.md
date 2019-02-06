@@ -9,7 +9,7 @@
 ```
 2. Build project from source
 ```
-make && make clean
+make
 ```
 3. Run executable, usage is documented if run with no params
 ```

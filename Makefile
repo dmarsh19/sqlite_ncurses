@@ -1,20 +1,22 @@
 CXX = clang++
-
-OBJECTS = main.o sqlite_query.o
-
 CXXFLAGS = -Wall -std=c++14
-  
 LDLIBS = -lsqlite3 -lmenu -lncurses
-  
-all: $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -o menu_from_sqlite $(OBJECTS) $(LDLIBS)
 
+objects = main.o sqlite_query.o
+srcdir := $(CURDIR)/src
+executable = menu_from_sqlite
+
+.PHONY: all
+all: build
+
+.PHONY: build
+build: $(objects)
+	$(CXX) $(CXXFLAGS) -o $(executable) $(objects) $(LDLIBS)
+
+.PHONY: clean
 clean:
-	rm *.o
+	$(RM) $(executable) $(objects)
 
-main.o: src/main.cc src/sqlite_query.h
-	$(CXX) $(CXXFLAGS) -c src/main.cc
-
-sqlite_query.o: src/sqlite_query.cc src/sqlite_query.h
-	$(CXX) $(CXXFLAGS) -c src/sqlite_query.cc
+%.o: $(srcdir)/%.cc $(srcdir)/sqlite_query.h
+	$(CXX) $(CXXFLAGS) -c $<
 
